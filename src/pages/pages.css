@@ -1,0 +1,211 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+.page-header { margin-bottom: 28px; }
+.page-header h1 { font-size: 1.7rem; font-weight: 800; color: #16181d; margin: 0 0 6px; }
+.page-header p { color: #6b7280; margin: 0; }
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 32px 24px;
+}
+.book-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.book-card-cover-shell {
+  position: relative;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 200ms ease;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.06),
+    0 12px 28px -8px rgba(15, 23, 42, 0.22),
+    6px 6px 0 -4px rgba(15, 23, 42, 0.04);
+}
+.book-card:hover .book-card-cover-shell {
+  transform: translateY(-4px);
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.08),
+    0 20px 36px -10px rgba(15, 23, 42, 0.3),
+    6px 6px 0 -4px rgba(15, 23, 42, 0.06);
+}
+.book-card-cover {
+  width: 100%;
+  aspect-ratio: 2/3;
+  border-radius: 14px;
+  object-fit: cover;
+  display: block;
+}
+.book-card-cover--placeholder {
+  background: linear-gradient(135deg, #5b6df5, #8c5bf5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 2.4rem;
+}
+.book-card-format-badges {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+}
+.book-card-format-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(22, 24, 29, 0.72);
+  backdrop-filter: blur(2px);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.book-card-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #16181d;
+  margin: 0 0 2px;
+  line-height: 1.3;
+}
+.book-card-author { font-size: 0.8rem; color: #9aa0ab; margin: 0; }
+.book-card-badge {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #5b6df5;
+  background: #eef1ff;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.pill-select {
+  appearance: none;
+  background: #fff;
+  border: 1px solid #e6e8ec;
+  border-radius: 999px;
+  padding: 9px 32px 9px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2b2f36;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+.pill-select:hover { border-color: #c7cdfb; }
+.pill-select:focus-visible { outline: 2px solid #5b6df5; outline-offset: 2px; }
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+.empty-state a, .empty-state button {
+  display: inline-block;
+  margin-top: 12px;
+  background: #16181d;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.form-card {
+  max-width: 420px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(15,23,42,0.08);
+}
+.form-card h1 { font-size: 1.4rem; font-weight: 800; margin: 0 0 6px; color: #16181d; }
+.form-card p.subtitle { color: #6b7280; margin: 0 0 24px; font-size: 0.9rem; }
+.form-field { margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px; }
+.form-field label { font-size: 0.82rem; font-weight: 600; color: #40444c; }
+.form-field input, .form-field select, .form-field textarea {
+  border: 1px solid #e2e4e8;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.92rem;
+  font-family: inherit;
+}
+.form-error { color: #d1414a; font-size: 0.85rem; margin: 0 0 12px; }
+.form-submit {
+  width: 100%;
+  background: #16181d;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.form-submit:hover { background: #2b2f36; }
+.form-submit:disabled { background: #c8cbd1; cursor: not-allowed; }
+.form-footnote { text-align: center; margin-top: 16px; font-size: 0.85rem; color: #6b7280; }
+.form-footnote a { color: #5b6df5; font-weight: 600; text-decoration: none; }
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+.library-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(15,23,42,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.library-card-logo {
+  width: 48px; height: 48px; border-radius: 12px; object-fit: cover;
+  background: linear-gradient(135deg, #5b6df5, #8c5bf5);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 700;
+}
+.library-card h3 { margin: 0; font-size: 1.05rem; color: #16181d; }
+.library-card p { margin: 0; color: #6b7280; font-size: 0.85rem; flex: 1; }
+.library-card-join {
+  align-self: flex-start;
+  background: #5b6df5; color: #fff; border: none; border-radius: 999px;
+  padding: 8px 16px; font-weight: 700; font-size: 0.82rem; cursor: pointer;
+  text-decoration: none;
+}
+.library-card-join:hover { background: #4756d4; }
+.library-card-join--joined { background: #eef1ff; color: #5b6df5; cursor: default; }
+
+.dashboard-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 800px) { .dashboard-grid { grid-template-columns: 2fr 1fr; } }
+.dashboard-section {
+  background: #fff; border-radius: 16px; padding: 22px; box-shadow: 0 4px 16px rgba(15,23,42,0.06);
+}
+.dashboard-section h2 { font-size: 1.05rem; margin: 0 0 14px; color: #16181d; }
+
+.card-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.card-list-item {
+  display: flex; align-items: center; justify-content: space-between;
+  background: #f7f8fa; border-radius: 12px; padding: 12px 14px; font-size: 0.88rem;
+}
+.card-list-item strong { color: #16181d; }
+.status-pill {
+  font-size: 0.65rem; font-weight: 700; padding: 3px 8px; border-radius: 999px;
+}
+.status-pill--active { background: #e6f7ec; color: #1f9254; }
+.status-pill--pending { background: #fff6df; color: #b8860b; }
