@@ -1,0 +1,184 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 700;
+  background: #fff;
+  border-bottom: 1px solid #eef0f3;
+}
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 20px;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #16181d;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.navbar-links {
+  display: none;
+  gap: 18px;
+  flex: 1;
+}
+.navbar-link {
+  color: #40444c;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+.navbar-link:hover { color: #5b6df5; }
+.navbar-link.active { color: #5b6df5; }
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.library-switcher { position: relative; }
+.library-switcher-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f7f8fa;
+  border: 1px solid #eceef1;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2b2f36;
+  cursor: pointer;
+  max-width: 180px;
+}
+.library-switcher-current {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.library-switcher-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: #fff;
+  border: 1px solid #eef0f3;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(15,23,42,0.12);
+  padding: 8px;
+  width: 240px;
+  z-index: 50;
+}
+.library-switcher-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 0.85rem;
+  color: #2b2f36;
+  cursor: pointer;
+  text-decoration: none;
+}
+.library-switcher-item:hover { background: #f7f8fa; }
+.library-switcher-item--active { background: #eef1ff; color: #5b6df5; font-weight: 600; }
+.library-switcher-item--add { color: #5b6df5; font-weight: 600; justify-content: center; }
+.library-switcher-divider {
+  height: 1px;
+  background: #eef0f3;
+  margin: 6px 4px;
+}
+.library-switcher-current-logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.library-switcher-logo {
+  width: 24px; height: 24px; border-radius: 6px; object-fit: cover; flex-shrink: 0;
+}
+.library-switcher-logo--placeholder {
+  display: flex; align-items: center; justify-content: center;
+  background: #5b6df5; color: #fff; font-weight: 700; font-size: 0.7rem;
+}
+.library-switcher-pending {
+  margin-left: auto;
+  font-size: 0.65rem;
+  color: #b8860b;
+  background: #fff6df;
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+.navbar-user { display: flex; align-items: center; gap: 8px; }
+
+.account-menu { position: relative; }
+.account-menu-btn {
+  display: flex; align-items: center; gap: 6px;
+  color: #2b2f36; background: #f7f8fa; border: 1px solid #eceef1;
+  font-size: 0.85rem; font-weight: 600;
+  padding: 7px 12px; border-radius: 999px; cursor: pointer;
+  max-width: 160px;
+}
+.account-menu-btn span {
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.account-menu-btn:hover { background: #eef0f3; }
+
+.account-menu-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: #fff;
+  border: 1px solid #eef0f3;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(15,23,42,0.12);
+  padding: 8px;
+  width: 220px;
+  z-index: 50;
+}
+.account-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 10px;
+  font-size: 0.85rem;
+  color: #2b2f36;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: left;
+}
+.account-menu-item:hover { background: #f7f8fa; }
+.account-menu-item--danger { color: #d1414a; }
+.account-menu-item--danger:hover { background: #fdf1f1; }
+.account-menu-divider {
+  height: 1px;
+  background: #eef0f3;
+  margin: 6px 4px;
+}
+
+.navbar-auth-links { display: flex; align-items: center; gap: 14px; }
+.navbar-signup-btn {
+  background: #16181d; color: #fff; text-decoration: none;
+  padding: 8px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 700;
+}
+.navbar-signup-btn:hover { background: #2b2f36; }
+
+@media (min-width: 900px) {
+  .navbar-links { display: flex; }
+}
